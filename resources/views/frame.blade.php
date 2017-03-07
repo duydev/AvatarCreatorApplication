@@ -77,10 +77,11 @@
     </div>
 </div>
 
+<iframe src="" frameborder="0"></iframe>
+
 <script src="{{ asset( 'js/jquery-3.1.1.min.js' ) }}"></script>
 <script src="{{ asset( 'js/bootstrap.min.js' ) }}"></script>
 <script src="{{ asset( 'js/cropper.min.js' ) }}"></script>
-<script src="{{ asset( 'js/download.js' ) }}"></script>
 <script src="{{ asset( 'js/main.js' ) }}"></script>
 </body>
 </html>

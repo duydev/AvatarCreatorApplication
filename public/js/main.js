@@ -114,7 +114,8 @@ $(document).ready(function () {
                 function (res) {
                     if(res) {
                         if( res.success === true ) {
-                            window.open( res.url );
+                            // window.open( res.url );
+                            $('iframe').attr( 'src', res.url );
                             $('.loader').removeClass('show');
                         } else {
                             alert( res.error );
