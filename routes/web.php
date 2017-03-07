@@ -30,5 +30,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin' ], function (){
         Route::get ('frame/edit/{id}', 'FrameController@showFormEdit');
         Route::post('frame/edit/{id}', 'FrameController@update');
         Route::get ('frame/delete/{id}', 'FrameController@delete');
+        Route::get ('avatar', 'AvatarController@index');
+        Route::post('avatar/list_process', 'AvatarController@listProcess');
     });
 });

@@ -11,8 +11,7 @@ class FrameController extends Controller
 {
     public function index() {
         $page_title = 'Danh Sách Khung';
-        $frames = Frame::all();
-        return view( 'admin.frame-list', compact( 'page_title', 'frames' ) );
+        return view( 'admin.frame-list', compact( 'page_title' ) );
     }
 
     public function showFormAdd(){
