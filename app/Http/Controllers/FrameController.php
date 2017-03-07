@@ -12,7 +12,8 @@ class FrameController extends Controller
     public function index() {
         $page_title = 'Đổi Ảnh Đại Diện';
         $frames = Frame::all();
-        return view( 'frame', compact( 'page_title', 'frames' ) );
+        $avatar_count = Avatar::count();
+        return view( 'frame', compact( 'page_title', 'frames', 'avatar_count' ) );
     }
 
     public function processImage(Request $req) {

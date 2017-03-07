@@ -124,3 +124,18 @@ h3 {
 .footer a {
     text-decoration: none;
 }
+
+.statistics {
+    box-sizing: border-box;
+    text-align: right;
+    margin: 25px;
+}
+
+.statistics .counter {
+    font-weight: 700;
+    color: blue;
+}
+
+.statistics .counter:hover {
+    color: #9f1aff;
+}

@@ -66,8 +66,9 @@
                     <li>Sử dụng các phím chức năng như xoay trái, xoay phải, phóng to, thu nhỏ, lật dọc, lật ngang hoặc reset để chỉnh sửa ảnh cho phù hợp với khung.</li>
                     <li>Click vào "Tải về" để tải ảnh sau khi chỉnh sửa kèm với khung đã chọn về máy.</li>
                 </ol>
-                <p>Mọi thông báo lỗi hoặc góp ý vui lòng liên hệ qua: <a href="mailto:hi@duydev.me">hi@duydev.me</a>.</p>
+                <p>Mọi thông báo lỗi hoặc góp ý vui lòng liên hệ qua: <a href="mailto:hi@duydev.me">hi@duydev.me</a> hoặc <a href="https://fb.com/Trannhatduy"><i class="fa fa-facebook-square"> Trần Nhật Duy</i></i></a>.</p>
             </div>
+            <div class="statistics">Có <span class="counter">{{ $avatar_count or '0' }}</span> avatar được tạo bằng ứng dụng này.</div>
         </div>
     </div>
 </div>
