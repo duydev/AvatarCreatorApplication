@@ -114,11 +114,7 @@ $(document).ready(function () {
                 function (res) {
                     if(res) {
                         if( res.success === true ) {
-                            var link = document.createElement('a');
-                            link.download = res.filename;
-                            link.href = res.url;
-                            // link.click();
-                            link.dispatchEvent(clickEvent);
+                            download( res.url, res.filename, "image/png" );
                             $('.loader').removeClass('show');
                         } else {
                             alert( res.error );

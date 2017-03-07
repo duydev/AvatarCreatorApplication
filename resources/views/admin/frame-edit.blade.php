@@ -23,7 +23,7 @@
                 </div>
                 <div class="form-group">
                     <label for="email">Ảnh Khung:</label>
-                    <input type="file" class="form-control" id="file"  name="image" accept="image/*">
+                    <input type="file" class="form-control" id="file"  name="image" accept="image/png">
                     <img class="preview hidden" src="" height="200" alt="Ảnh xem trước...">
                 </div>
                 <div class="form-group">
