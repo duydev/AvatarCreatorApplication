@@ -115,8 +115,8 @@ $(document).ready(function () {
                     if(res) {
                         if( res.success === true ) {
                             var link = document.createElement('a');
-                            link.download = res.ur;
-                            link.href = canvas.toDataURL();
+                            link.download = res.filename;
+                            link.href = res.url;
                             // link.click();
                             link.dispatchEvent(clickEvent);
                             $('.loader').removeClass('show');

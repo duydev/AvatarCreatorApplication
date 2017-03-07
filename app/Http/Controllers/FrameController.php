@@ -16,10 +16,11 @@ class FrameController extends Controller
 
     public function processImage(Request $req) {
         $res = [
-            'success' => false,
-            'url'     => '',
-            'message' => 'Xử lý ảnh thành công.',
-            'error'   => 'Quá trình xử lý ảnh gặp lỗi. Vui lòng thử lại.'
+            'success'  => false,
+            'url'      => '',
+            'filename' => '',
+            'message'  => 'Xử lý ảnh thành công.',
+            'error'    => 'Quá trình xử lý ảnh gặp lỗi. Vui lòng thử lại.'
         ];
         $frameID = $req->frameID;
         $imageData = $req->image;
@@ -52,6 +53,7 @@ class FrameController extends Controller
                             $avatar->save();
                             $res['success'] = true;
                             $res['url'] = asset( $imageURL );
+                            $res['filename'] = basename( $imageURL );
                         } else {
                             $avatar->delete();
                         }
