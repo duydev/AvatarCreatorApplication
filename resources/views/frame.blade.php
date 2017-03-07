@@ -27,7 +27,7 @@
             <div class="dyn-box">
                 <div class="frame-image"></div>
                 <div class="crop-image">
-                    <img class="preview-image" src="http://placehold.it/500x500" alt="Preview image">
+                    <img class="preview-image" src="{{ asset( 'images/logohyd.jpg' ) }}" alt="Preview image">
                     <input type="file" class="hidden" name="upload-file" id="upload-file" accept="image/*">
                 </div>
             </div>
