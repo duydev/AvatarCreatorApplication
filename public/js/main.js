@@ -114,7 +114,7 @@ $(document).ready(function () {
                 function (res) {
                     if(res) {
                         if( res.success === true ) {
-                            download( res.url, res.filename, "image/png" );
+                            window.open( res.url );
                             $('.loader').removeClass('show');
                         } else {
                             alert( res.error );

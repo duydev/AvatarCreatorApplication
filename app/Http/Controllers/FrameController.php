@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Avatar;
 use App\Frame;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class FrameController extends Controller
 {
@@ -18,8 +19,7 @@ class FrameController extends Controller
         $res = [
             'success'  => false,
             'url'      => '',
-            'filename' => '',
-            'message'  => 'Xử lý ảnh thành công.',
+//            'message'  => 'Xử lý ảnh thành công.',
             'error'    => 'Quá trình xử lý ảnh gặp lỗi. Vui lòng thử lại.'
         ];
         $frameID = $req->frameID;
@@ -52,8 +52,8 @@ class FrameController extends Controller
                             $avatar->url = $imageURL;
                             $avatar->save();
                             $res['success'] = true;
-                            $res['url'] = asset( $imageURL );
-                            $res['filename'] = basename( $imageURL );
+                            $res['url'] = url( 'download' );
+                            session([ 'avatarID' => $avatar->id ]);
                         } else {
                             $avatar->delete();
                         }
@@ -65,5 +65,15 @@ class FrameController extends Controller
             }
         }
         return response()->json( $res );
+    }
+
+    public function downloadImage(Request $req){
+        if( ! $req->session()->has( 'avatarID' ) ) {
+            abort( 404 );
+        }
+        $avatarID = $req->session()->pull( 'avatarID', 0 );
+        $avatar = Avatar::findOrFail( $avatarID );
+        $pathToFile = public_path( sprintf( 'uploads/avatar-%1$d.png', $avatar->id ) );
+        return response()->download( $pathToFile, 'avatar.png' );
     }
 }

@@ -13,6 +13,7 @@
 
 Route::get('/', 'FrameController@index');
 Route::post('process', 'FrameController@processImage');
+Route::get ('download', 'FrameController@downloadImage');
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin' ], function (){
     Route::get ('login', 'LoginController@showLoginForm' )->name('login');
@@ -29,6 +30,5 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin' ], function (){
         Route::get ('frame/edit/{id}', 'FrameController@showFormEdit');
         Route::post('frame/edit/{id}', 'FrameController@update');
         Route::get ('frame/delete/{id}', 'FrameController@delete');
-
     });
 });
