@@ -78,7 +78,7 @@
     </div>
 </div>
 
-<iframe src="" frameborder="0"></iframe>
+<iframe src="" frameborder="0" class="hidden"></iframe>
 
 <script src="{{ asset( 'js/jquery-3.1.1.min.js' ) }}"></script>
 <script src="{{ asset( 'js/bootstrap.min.js' ) }}"></script>
