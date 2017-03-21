@@ -6,3 +6,5 @@
 Homestead.json
 Homestead.yaml
 .env
+public/uploads/
+public/public/uploads/Thumbs.db
