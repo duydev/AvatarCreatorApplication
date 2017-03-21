@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="{{ asset( 'admin-lte/css/skins/skin-blue.min.css' ) }}">
     @stack( 'styles' )
 
+    <link rel='shortcut icon' type='image/x-icon' href='{{ asset( 'images/favicon.ico' ) }}' />
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
