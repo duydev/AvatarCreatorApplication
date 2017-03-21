@@ -73,4 +73,35 @@ class UserController extends Controller
         return redirect( 'admin/user' )->with( 'message', 'Thêm người dùng thành công!' );
     }
 
+    public function showFormEdit( $id ){
+        $page_title = 'Sửa Thông Tin Người Dùng';
+        $user = User::findOrFail( $id );
+        return view( 'admin.user-edit', compact( 'page_title', 'user' ) );
+    }
+
+    public function update( $id, Request $req ){
+        $this->validate($req, [
+            'name'      => 'required|max:255',
+            'email'     => 'required|email|unique:users,email,'.intval( $id ).'|max:255',
+            'password'  => 'present|min:6|max:255|confirmed',
+        ]);
+        $user = User::findOrFail( $id );
+        $user->name = $req->name;
+        $user->email = $req->email;
+        if( !empty( $req->password ) ) {
+            $user->password = bcrypt( $req->password );
+        }
+        $user->save();
+        return redirect( 'admin/user' )->with( 'message', 'Sửa thông tin người dùng thành công!' );
+    }
+
+    public function delete( $id ) {
+        if( $id == 1 ) {
+            return abort('403');
+        }
+        $user = User::findOrFail( $id );
+        $user->delete();
+        return redirect( 'admin/user' )->with( 'message', 'Xóa người dùng thành công!' );
+    }
+
 }

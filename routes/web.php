@@ -36,5 +36,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin' ], function (){
         Route::post('user/list_process', 'UserController@listProcess');
         Route::get ('user/add', 'UserController@showFormAdd');
         Route::post('user/add', 'UserController@create');
+        Route::get ('user/edit/{id}', 'UserController@showFormEdit');
+        Route::post('user/edit/{id}', 'UserController@update');
+        Route::get ('user/delete/{id}', 'UserController@delete');
     });
 });
