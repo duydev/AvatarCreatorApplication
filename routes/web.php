@@ -18,7 +18,7 @@ Route::get ('download', 'FrameController@downloadImage');
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin' ], function (){
     Route::get ('login', 'LoginController@showLoginForm' )->name('login');
     Route::post('login', 'LoginController@login' );
-    Route::group(['middleware' => 'auth'], function (){
+    Route::group(['middleware' => [ 'auth', 'revalidate' ] ], function (){
         Route::get ('logout', 'LoginController@logout' )->name('logout');
         Route::get ('/', 'DashboardController@index');
         Route::get ('account', 'AccountController@index');
