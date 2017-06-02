@@ -7,10 +7,10 @@
     <title>{{ $page_title or '' }}</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="{{ asset( 'css/bootstrap.min.css' ) }}">
-    <link rel="stylesheet" href="{{ asset( 'css/font-awesome.min.css' ) }}">
-    <link rel="stylesheet" href="{{ asset( 'css/cropper.min.css' ) }}">
-    <link rel="stylesheet" href="{{ asset( 'css/styles.css' ) }}">
+    <link rel="stylesheet" href="{{ url( 'assets/css/bootstrap.min.css' ) }}">
+    <link rel="stylesheet" href="{{ url( 'assets/css/font-awesome.min.css' ) }}">
+    <link rel="stylesheet" href="{{ url( 'assets/css/cropper.min.css' ) }}">
+    <link rel="stylesheet" href="{{ url( 'assets/css/styles.css' ) }}">
 
     <link rel='shortcut icon' type='image/x-icon' href='{{ asset( 'images/favicon.ico' ) }}' />
 
@@ -29,7 +29,7 @@
             <div class="dyn-box">
                 <div class="frame-image"></div>
                 <div class="crop-image">
-                    <img class="preview-image" src="{{ asset( 'images/logohyd.jpg' ) }}" alt="Preview image">
+                    <img class="preview-image" src="{{ url( 'assets/images/logohyd.jpg' ) }}" alt="Preview image">
                     <input type="file" class="hidden" name="upload-file" id="upload-file" accept="image/*">
                 </div>
             </div>
@@ -82,9 +82,9 @@
 
 <iframe src="" frameborder="0" class="hidden"></iframe>
 
-<script src="{{ asset( 'js/jquery-3.1.1.min.js' ) }}"></script>
-<script src="{{ asset( 'js/bootstrap.min.js' ) }}"></script>
-<script src="{{ asset( 'js/cropper.min.js' ) }}"></script>
-<script src="{{ asset( 'js/main.js' ) }}"></script>
+<script src="{{ url( 'assets/js/jquery-3.1.1.min.js' ) }}"></script>
+<script src="{{ url( 'assets/js/bootstrap.min.js' ) }}"></script>
+<script src="{{ url( 'assets/js/cropper.min.js' ) }}"></script>
+<script src="{{ url( 'assets/js/main.js' ) }}"></script>
 </body>
 </html>

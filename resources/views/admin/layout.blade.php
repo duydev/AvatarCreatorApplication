@@ -41,9 +41,9 @@ hold-transition skin-blue sidebar-mini
 @endsection
 
 @push( 'styles' )
-<link rel="stylesheet" href="{{ asset( 'libs/pace/pace.min.css' ) }}">
+<link rel="stylesheet" href="{{ url( 'assets/libs/pace/pace.min.css' ) }}">
 @endpush
 
 @push( 'scripts' )
-<script src="{{ asset( 'libs/pace/pace.min.js' ) }}"></script>
+<script src="{{ url( 'assets/libs/pace/pace.min.js' ) }}"></script>
 @endpush
