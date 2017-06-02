@@ -44,7 +44,7 @@ class FrameController extends Controller
                             'url'=>''
                         ]);
                         $avatar->save();
-                        $outputName = public_path( sprintf( 'uploads/avatar-%1$d.png', $avatar->id ) );
+                        $outputName = public_path( sprintf( '../uploads/avatar-%1$d.png', $avatar->id ) );
                         $imageURL = asset( sprintf( 'uploads/avatar-%1$d.png', $avatar->id ) );
                         $mergeImage = imagecreatetruecolor( $wC, $hC );
                         imagecopy($mergeImage, $croppedImage, 0, 0, 0, 0, $wC, $hC );

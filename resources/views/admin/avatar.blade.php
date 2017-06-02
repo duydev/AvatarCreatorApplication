@@ -38,16 +38,16 @@
 @endsection
 
 @push( 'styles' )
-<link rel="stylesheet" href="{{ asset( 'libs/datatables/jquery.dataTables.min.css' ) }}">
-<link rel="stylesheet" href="{{ asset( 'libs/datatables/jquery.dataTables_themeroller.css' ) }}">
-<link rel="stylesheet" href="{{ asset( 'libs/datatables/dataTables.bootstrap.css' ) }}">
-<link rel="stylesheet" href="{{ asset( 'libs/colorbox/colorbox.css' ) }}">
+<link rel="stylesheet" href="{{ url( 'assets/libs/datatables/jquery.dataTables.min.css' ) }}">
+<link rel="stylesheet" href="{{ url( 'assets/libs/datatables/jquery.dataTables_themeroller.css' ) }}">
+<link rel="stylesheet" href="{{ url( 'assets/libs/datatables/dataTables.bootstrap.css' ) }}">
+<link rel="stylesheet" href="{{ url( 'assets/libs/colorbox/colorbox.css' ) }}">
 @endpush
 
 @push( 'scripts' )
-<script src="{{ asset( 'libs/colorbox/jquery.colorbox-min.js' ) }}"></script>
-<script src="{{ asset( 'libs/datatables/jquery.dataTables.min.js' ) }}"></script>
-<script src="{{ asset( 'libs/datatables/dataTables.bootstrap.min.js' ) }}"></script>
+<script src="{{ url( 'assets/libs/colorbox/jquery.colorbox-min.js' ) }}"></script>
+<script src="{{ url( 'assets/libs/datatables/jquery.dataTables.min.js' ) }}"></script>
+<script src="{{ url( 'assets/libs/datatables/dataTables.bootstrap.min.js' ) }}"></script>
 <script>
     $(document).ready(function () {
 
