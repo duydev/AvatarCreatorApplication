@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{ url( 'assets/css/cropper.min.css' ) }}">
     <link rel="stylesheet" href="{{ url( 'assets/css/styles.css' ) }}">
 
-    <link rel='shortcut icon' type='image/x-icon' href='{{ asset( 'images/favicon.ico' ) }}' />
+    <link rel='shortcut icon' type='image/x-icon' href='{{ url( 'assets/images/favicon.ico' ) }}' />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="col-md-5 col-sm-5 right-block">
-            <a href="http://hutechyouthdev.vn">
+            <a href="http://itopenday.hutechyouthdev.vn">
                 <div class="logo-hyd"></div>
             </a>
             <div class="crop-tool">
@@ -64,19 +64,20 @@
             <div class="guide">
                 <h3>Hướng dẫn:</h3>
                 <ol>
-                    <li>Click vào nút "Tải lên" để chọn và upload ảnh lên website.</li>
-                    <li>Sử dụng các phím chức năng như xoay trái, xoay phải, phóng to, thu nhỏ, lật dọc, lật ngang hoặc reset để chỉnh sửa ảnh cho phù hợp với khung.</li>
-                    <li>Click vào "Tải về" để tải ảnh sau khi chỉnh sửa kèm với khung đã chọn về máy.</li>
+                    <li>Click vào nút <strong>"Tải lên"</strong> để chọn ảnh và upload.</li>
+                    <li>Click các nút xoay trái, xoay phải, phóng to, thu nhỏ, lật dọc, lật ngang hoặc reset để chỉnh sửa ảnh cho phù hợp với khung.</li>
+                    <li>Click vào <strong>"Tải về"</strong> để tải ảnh và tiến hành thay Avartar cho Facebook.</li>
                 </ol>
                 <p>Mọi thông báo lỗi hoặc góp ý vui lòng liên hệ qua: <a href="mailto:hi@duydev.me">hi@duydev.me</a> hoặc <a href="https://fb.com/Trannhatduy"><i class="fa fa-facebook-square"> Trần Nhật Duy</i></i></a>.</p>
             </div>
-            <div class="statistics">Có <span class="counter">{{ $avatar_count or '0' }}</span> avatar được tạo bằng ứng dụng này.</div>
+            <div class="statistics">Có <span class="counter">{{ $avatar_count or '0' }}</span> Avatar được tạo bằng ứng dụng này.</div>
         </div>
     </div>
 </div>
 <div class="container footer">
     <div class="row">
-        <p>Copyright &copy; 2017 - Xây dựng và phát triển bởi <a href="mailto:hi@duydev.me">Trần Nhật Duy</a>.</p>
+        <p>Copyright &copy; 2017 - Xây dựng và phát triển bởi <a href="mailto:hi@duydev.me">Trần Nhật Duy</a>- <a
+                    href="http://hutechyouthdev.vn">CLB Hutech Youth Dev</a>.</p>
     </div>
 </div>
 

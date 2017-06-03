@@ -44,8 +44,8 @@ class FrameController extends Controller
                             'url'=>''
                         ]);
                         $avatar->save();
-                        $outputName = public_path( sprintf( '../uploads/avatar-%1$d.png', $avatar->id ) );
-                        $imageURL = asset( sprintf( 'uploads/avatar-%1$d.png', $avatar->id ) );
+                        $outputName = sprintf( './uploads/avatar-%1$d.png', $avatar->id );
+                        $imageURL = url( sprintf( 'uploads/avatar-%1$d.png', $avatar->id ) );
                         $mergeImage = imagecreatetruecolor( $wC, $hC );
                         imagecopy($mergeImage, $croppedImage, 0, 0, 0, 0, $wC, $hC );
                         imagecopy($mergeImage, $frameImage, 0, 0, 0, 0, $wF, $hF );
@@ -74,7 +74,7 @@ class FrameController extends Controller
         }
         $avatarID = $req->session()->pull( 'avatarID', 0 );
         $avatar = Avatar::findOrFail( $avatarID );
-        $pathToFile = public_path( sprintf( 'uploads/avatar-%1$d.png', $avatar->id ) );
+        $pathToFile = sprintf( './uploads/avatar-%1$d.png', $avatar->id );
         return response()->download( $pathToFile, 'avatar.png' );
     }
 }

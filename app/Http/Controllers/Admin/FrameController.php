@@ -36,7 +36,7 @@ class FrameController extends Controller
         $frame->save();
         $filename = sprintf( 'khung-%1$d.%2$s', $frame->id, $image->extension() );
         $path = $image->storeAs( 'uploads', $filename );
-        list($width, $height) = getimagesize( public_path( $path ) );
+        list($width, $height) = getimagesize( $path );
         $frame->url = asset( $path );
         $frame->width = $width;
         $frame->height = $height;
@@ -103,7 +103,7 @@ class FrameController extends Controller
                 Storage::disk('_public')->delete( 'uploads/'.$filename );
             }
             $path = $image->storeAs( 'uploads', $filename );
-            list($width, $height) = getimagesize( public_path( $path ) );
+            list($width, $height) = getimagesize( public_path( '../'. $path ) );
             $frame->url = asset( $path );
             $frame->width = $width;
             $frame->height = $height;
@@ -114,7 +114,10 @@ class FrameController extends Controller
 
     public function delete( $id ) {
         $frame = Frame::findOrFail( $id );
-        Storage::disk('_public')->delete( 'uploads/'.basename( $frame->url ) );
+        $frame_path = basename( $frame->url );
+        if( !empty( $frame_path ) ) {
+            Storage::disk('_public')->delete( 'uploads/'. $frame_path );
+        }
         $frame->delete();
         return redirect( 'admin/frame' )->with( 'message', 'Xóa khung thành công!' );
     }
