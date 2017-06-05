@@ -41,6 +41,7 @@
             </a>
             <div class="crop-tool">
                 <button type="button" class="btn btn-primary btn-upload"><i class="fa fa-upload"></i> Tải lên</button>
+                <button type="button" class="btn btn-primary btn-fb-upload"><i class="fa fa-facebook-official"></i> Lấy Ảnh Từ Facebook</button>
                 <button type="button" class="btn btn-rotate-left hidden"><i class="fa fa-undo"></i></button>
                 <button type="button" class="btn btn-rotate-right hidden"><i class="fa fa-repeat"></i></button>
                 <button type="button" class="btn btn-zoom-in hidden"><i class="fa fa-search-plus"></i></button>
@@ -89,5 +90,6 @@
 <script src="{{ url( 'assets/js/bootstrap.min.js' ) }}"></script>
 <script src="{{ url( 'assets/js/cropper.min.js' ) }}"></script>
 <script src="{{ url( 'assets/js/main.js' ) }}"></script>
+<script src="{{ url( 'assets/js/fb.js' ) }}"></script>
 </body>
 </html>

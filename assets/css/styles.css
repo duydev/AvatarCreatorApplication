@@ -61,7 +61,7 @@ body {
     margin-bottom: 5px;
 }
 
-.btn-upload, .btn-reset, .btn-download {
+.btn-upload, .btn-reset, .btn-download, .btn-fb-upload {
     width: 100%;
 }
 
