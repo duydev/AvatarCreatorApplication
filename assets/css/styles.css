@@ -139,3 +139,7 @@ h3 {
 .statistics .counter:hover {
     color: #9f1aff;
 }
+
+.ads-banner img {
+    width: 100%;
+}
