@@ -33,11 +33,12 @@
                     <input type="file" class="hidden" name="upload-file" id="upload-file" accept="image/*">
                 </div>
             </div>
-            <div class="ads-banner"><img src="{{ url( 'assets/images/banner1.png' ) }}" alt=""></div>
+            <div class="ads-banner"><!-- banner here --></div>
         </div>
         <div class="col-md-5 col-sm-5 right-block">
-            <a href="http://itopenday.hutechyouthdev.vn">
-                <div class="logo-hyd"></div>
+            <a href="https://ctxhhutech.com">
+                <!--<div class="logo-hyd"></div>-->
+                <img src="https://ctxhhutech.com/wp-content/uploads/2018/05/background-tethieunhi.png" alt="" class="img-responsive" style="padding-bottom:10px;">
             </a>
             <div class="crop-tool">
                 <button type="button" class="btn btn-primary btn-upload"><i class="fa fa-upload"></i> Tải lên</button>
@@ -51,7 +52,7 @@
                 <button type="button" class="btn btn-reset hidden"><i class="fa fa-refresh"> Làm lại</i></button>
                 <button type="button" class="btn btn-success btn-download hidden"><i class="fa fa-download"></i> Tải xuống</button>
             </div>
-            <div class="frame-change hidden">
+            <div class="frame-change">
                 <h3>Chọn khung:</h3>
                 <select name="frame" id="frame" class="form-control" data-action="{{ url( 'process' ) }}" data-token="{{ csrf_token() }}">
                 @if( $frames->count() == 0 )
@@ -70,17 +71,16 @@
                     <li>Click các nút xoay trái, xoay phải, phóng to, thu nhỏ, lật dọc, lật ngang hoặc reset để chỉnh sửa ảnh cho phù hợp với khung.</li>
                     <li>Click vào <strong>"Tải về"</strong> để tải ảnh và tiến hành thay Avartar cho Facebook.</li>
                 </ol>
-                <p class="hidden">Mọi thông báo lỗi hoặc góp ý vui lòng liên hệ qua: <a href="mailto:hi@duydev.me">hi@duydev.me</a> hoặc <a href="https://fb.com/Trannhatduy"><i class="fa fa-facebook-square"> Trần Nhật Duy</i></i></a>.</p>
+                <p>Mọi thông báo lỗi hoặc góp ý vui lòng liên hệ qua email <a href="mailto:duytn@ctxhhutech.com">duytn@ctxhhutech.com</a>.</p>
             </div>
             <div class="statistics">Có <span class="counter">{{ $avatar_count or '0' }}</span> Avatar được tạo bằng ứng dụng này.</div>
-            <div class="ads-banner"><img src="{{ url( 'assets/images/banner2.png' ) }}" alt=""></div>
+            <div class="ads-banner"><!-- banner here --></div>
         </div>
     </div>
 </div>
 <div class="container footer">
     <div class="row">
-        <p>Copyright &copy; 2017 - Xây dựng và phát triển bởi <a href="mailto:hi@duydev.me">Trần Nhật Duy</a>- <a
-                    href="http://hutechyouthdev.vn">CLB Hutech Youth Dev</a>.</p>
+        <p>&copy; {{ date('Y') }} - <a href="https://ctxhhutech.com">Đội Công Tác Xã Hội HUTECH</a>.</p>
     </div>
 </div>
 
