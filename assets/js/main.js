@@ -112,13 +112,13 @@ $(document).ready(function () {
                 $('.frame-change select').data('action'),
                 data,
                 function (res) {
-                    if(res) {
-                        if( res.success === true ) {
+                    if (res) {
+                        if (res.success === true) {
                             // window.open( res.url );
-                            $('iframe').attr( 'src', res.url );
+                            $('iframe').attr('src', res.url);
                             $('.loader').removeClass('show');
                         } else {
-                            alert( res.error );
+                            alert(res.error);
                         }
                     } else {
                         alert('Ứng dụng Web này đang gặp lỗi. Vui lòng tải lại trang và thử lại.');

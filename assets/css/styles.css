@@ -61,7 +61,7 @@ body {
     margin-bottom: 5px;
 }
 
-.btn-upload, .btn-reset, .btn-download {
+.btn-upload, .btn-reset, .btn-download, .btn-fb-upload {
     width: 100%;
 }
 
@@ -102,8 +102,8 @@ h3 {
 
 .logo-hyd {
     width: 100%;
-    height: 105px;
-    background: url('../images/logo-hyd.png') no-repeat center;
+    height: 150px;
+    background: url('../images/banner.png') no-repeat center;
     background-size: contain;
     opacity: 0.7;
 }
@@ -138,4 +138,8 @@ h3 {
 
 .statistics .counter:hover {
     color: #9f1aff;
+}
+
+.ads-banner img {
+    width: 100%;
 }

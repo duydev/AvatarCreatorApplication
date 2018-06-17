@@ -55,11 +55,11 @@ hold-transition login-page
 @endsection
 
 @push( 'styles' )
-<link rel="stylesheet" href="{{ asset( 'libs/iCheck/square/blue.css' ) }}">
+<link rel="stylesheet" href="{{ url( 'assets/libs/iCheck/square/blue.css' ) }}">
 @endpush
 
 @push( 'scripts' )
-<script src="{{ asset( 'libs/iCheck/icheck.min.js' ) }}"></script>
+<script src="{{ url( 'assets/libs/iCheck/icheck.min.js' ) }}"></script>
 <script>
     $(function () {
         $('input').iCheck({
